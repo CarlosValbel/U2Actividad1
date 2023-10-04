@@ -1,0 +1,23 @@
+﻿@model U2Actividad1.Models.Entities.Especy
+
+@{
+    Layout = "Layout";
+}
+
+
+
+
+<div class="especieficha1">
+    <img src="~/especies/@(Model.Id).jpg" />
+    <div>
+        <h1>@Model.Especie</h1>
+        <p><label>Clase:</label><a href="~/@Model.IdClaseNavigation.Nombre">@Model.IdClaseNavigation.Nombre</a></p>
+        <p><label>Peso:</label>@Model.Peso.Value.ToString("0.00kg")</p>
+        <p><label>Tamaño:</label>@Model.Tamaño.Value.ToString("0cm")</p>
+        <p><label>Habitat:</label>@Model.Habitat</p>
+        <p><label>Descripción:</label></p>
+        <p>@Model.Observaciones</p>
+    </div>
+
+    <a href="~/@Model.IdClaseNavigation.Nombre">Regresar</a>
+</div>

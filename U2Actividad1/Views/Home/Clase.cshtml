@@ -1,0 +1,14 @@
+﻿@model IEnumerable<U2Actividad1.Models.ViewModels.ClaseViewModel>
+@{
+    Layout = "Layout";
+}
+
+
+<div class="listaEspecies2">
+    @foreach (var e in Model)
+    {
+        <a href="~/@e.Clase/@e.Nombre.Replace(" ","-")">
+            <img src="~/especies/@(e.Id).jpg" title="@e.Nombre" />
+        </a>
+    }
+</div>
